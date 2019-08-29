@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+
+       <header>
+        
+        <div class="section">
+            <div class="navbar navbar-desktop">
+                <button class="navbar-toggler">
+                    <span>Menu</span>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="#home">ГОЛОВНА</a></li>
+                        <li><a href="#about">ПРО МЕНЕ</a></li>
+                        <li><a href="#portfolio">ПОРТФОЛІО</a></li>
+                        <li><a href="#contacts">КОНТАКТИ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="section home" id="home">
+        <div class="container">
+            <div class="logo"><img src="img/Logo.png"></div>
+        
+            <div class="photo"> <p>PHOTOGRAPHY &&#160;ILLUSTRATION </p> </div>
+        
+        </div>
+    </div>
+
+    <div class="section about" id="about">
+        <div class="container">
+              <div class="square">
+               
+                <div class="one"> </div>
+                
+                    <div class="Text1">
+                        <p> 
+                Привіт, мене звати Іра, мені 20 років.
+                Я навчаюся на третьому курсі Львівської 
+                Національної Академії Мистецтв, на кафедрі 
+                Графічного дизайну. 
+                            
+                Обожнюю малювати портрети та
+                фотографувати. У своїх роботах в основному 
+                використовую різні графічні техніки,але
+                найбільше люблю працювати з вугіллям.
+                            
+                Як на мене, завдяки йому можна найвдаліше 
+                передати емоції та глибину портрету,
+                створюючи у своїй роботі особливо
+                заворожуючу атмосферу.</p>
+                         </div>
+               
+                
+                <img src='Face1.jpg' class="two">                </div>
+        </div>
+    </div>
+
+    <div class="section portfolio" id="portfolio">
+        <div class="container">
+         
+                <div class="gallerycont">
+                <img src="img/Gallery1.jpg" class="Gallery">
+                <img src="img/Gallery2.jpg" class="Gallery">
+                <img src="img/Gallery3.jpg" class="Gallery">
+                <img src="img/Gallery4.jpg" class="Gallery">
+                <img src="img/Gallery5.jpg" class="Gallery">
+                <img src="img/Gallery6.jpg" class="Gallery">
+               </div> 
+                <div class="featured-grid">
+            <div class="featured-grid__item"><img src="img/Cont4Img1.jpg"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img2.jpg"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img3.jpg"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img4.jpg"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img5.jpg"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img6.jpg"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img7.jpg"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img8.png"></div>
+            <div class="featured-grid__item"><img src="img/Cont4Img9.jpg"></div>
+        </div>  
+
+        </div>
+    </div>
+
+       <div class="section contacts" id="contacts">
+       <div class="container">
+       
+      
+       
+<form class="form">
+   <img src="img/Cont5Img2.jpg" class="Cont5Img2">
+   
+  <p>Responsive, scemantic, & accessible. Everything a form needs to be.</p>
+  <div class="in">
+  <div class="input-group">
+   
+    <label for="name" id="nameLabel">ІМ'Я:</label>
+    <input type="text" class="form-element" name="name" required aria-required="true" aria-describedby="nameLabel" >
+  </div>
+    <div class="input-group">
+    <label for="phone" id="phoneLabel">ТЕЛЕФОН:</label>
+    <input type="tel" class="form-element" name="phone" aria-describedby="phoneLabel">
+  </div>
+    <div class="input-group">
+    <label for="email" id="emailLabel">EMAIL:</label>
+    <input type="email" class="form-element" name="email" requried aria-required="true" aria-describedby="emailLabel">
+  </div>
+  <div class="input-group">
+    <label for="comments" id="commentsLabel">ПОБАЖАННЯ:</label>
+      <textarea  class="form-element" rows="8" name="comments" aria-describedby="commentsLabel"></textarea>
+  </div>
+  <input type="Submit" class="submit" value="ВІДПРАВИТИ">
+</div>
+</form>
+       </div>
+       
+    </div>
+</body>
+
+
+    <!-- JS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/menuspy@1.3.0/dist/menuspy.min.js" integrity="sha256-nLsUsNbD5SyESe6GrfVY1ay1ThxDUl5FZPqwhFRCzxA=" crossorigin="anonymous"></script>
+
+      <script>
+        /* menu scroll spy */
+        $(document).ready(function() {
+            var navmenu = $('.navbar ul')[0];
+            var ms = new MenuSpy(navmenu);
+        });
+        $(document).ready(function() {
+            var mobileMaxWidth = 768,
+                lastClickTime = 0,
+                $navbar = $('.navbar'),
+                $toggler = $navbar.find('.navbar-toggler'),
+                $nav = $navbar.find('ul');
+
+            var navbarResp = function() {
+                if ($(window).width() > mobileMaxWidth)
+                    $navbar.addClass('navbar-desktop').removeClass('navbar-mobile');
+                else
+                    $navbar.addClass('navbar-mobile').removeClass('navbar-desktop');
+            };
+            var _ = navbarResp();
+            window.onresize = navbarResp;
+
+            /* uncomment to test mobile version of navbar  */
+            // $navbar.addClass('navbar-mobile').removeClass('navbar-desktop');
+
+            $toggler.click(function() {
+
+                var interval = 200;
+                var currClickTime = new Date().getTime();
+                var diff = currClickTime - lastClickTime;
+                lastClickTime = currClickTime;
+
+                if (diff < interval) {
+                    return false;
+                } else {
+                    if ($navbar.hasClass('navbar-open'))
+                        $navbar.removeClass('navbar-open');
+                    else
+                        $navbar.addClass('navbar-open');
+                }
+            });
+
+            $nav.find('a').click(function() {
+                $navbar.toggleClass('navbar-open');
+            });
+        });
+
+    </script>
+
+<script>$(document).ready(function(){
+  $('.form-element').focus(function(){
+    $(this).siblings('label').addClass('focus');
+  });
+  $('.form-element').focusout(function(){
+    if ($(this).val() === ''){
+      $(this).siblings('label').removeClass('focus');
+   }
+  });
+});</script>
+
+
